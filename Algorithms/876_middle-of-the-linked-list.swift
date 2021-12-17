@@ -27,3 +27,16 @@ class Solution {
         return temp
     }
 }
+
+// 快慢指针
+class Solution2 {
+    func middleNode(_ head: ListNode?) -> ListNode? {
+        var quick = head
+        var slow = head
+        while quick != nil && quick?.next != nil {
+            quick = quick?.next?.next
+            slow = slow?.next
+        }
+        return slow
+    }
+}
